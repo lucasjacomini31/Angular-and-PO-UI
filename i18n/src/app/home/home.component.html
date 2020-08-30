@@ -1,0 +1,41 @@
+<a> {{literals["converter"]}} </a>
+
+<po-input name="input" [(ngModel)]="mandar"  p-label="Dolar"> </po-input>
+<po-input name="input" [(ngModel)]="receber" p-label="Real"> </po-input>
+
+<po-radio-group
+  name="radioGroupBasic"
+  p-label='{{literals["unityvalue"]}}'
+  [(ngModel)]="moedas"
+  [p-options]="[
+    { label: 'EURO', value: 'EUR' },
+    { label: 'USD', value: 'USD' }
+  ]"
+  (p-change)='poNotification.success(teste)'
+>
+</po-radio-group>
+
+
+<hr>
+<h1>I18n</h1>
+<br>
+<a> {{literals["add"]}} </a>
+<br>
+<a> {{literals["greeting"]}} </a>
+<br>
+<a> {{literals["people"]}} </a>
+<br>
+<a> {{literals["remove"]}} </a>
+
+<hr>
+
+
+<po-select name="select" p-label='{{literals["language"]}}'
+  [p-options]="[
+    { label: 'Portugues', value: 'pt-BR' },
+    { label: 'Ingles', value: 'en-US' }
+  ]"
+  [(ngModel)] = "lang"
+
+>
+</po-select>

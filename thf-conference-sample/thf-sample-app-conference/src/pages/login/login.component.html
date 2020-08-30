@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Login</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <thf-page-login
+    (t-login-submit)="onLogin($event)"
+    t-hide-remember-user>
+  </thf-page-login>
+
+</ion-content>

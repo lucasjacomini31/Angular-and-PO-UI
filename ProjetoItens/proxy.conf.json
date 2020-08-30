@@ -1,0 +1,14 @@
+{
+  "/api": {
+    "target": "http://fluig.consultoriaprime.com/",
+    "secure": false,
+    "pathRewrite":{
+      "^/api": ""
+    },
+    "changeOrigin": true,
+    "logLevel": "error"
+
+
+  }
+}
+

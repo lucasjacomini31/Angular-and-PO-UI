@@ -1,0 +1,15 @@
+<ion-content class="ion-padding">
+  <ion-button expand="full" (click)="loadHomePage()">Buscar informações</ion-button>
+  <ion-button expand="full" color="danger" (click)="clear()">Apagar informações</ion-button>
+
+
+  <ion-card *ngIf="conference">
+    <ion-card-content>
+      <ion-card-title>
+        {{ conference.title }}
+      </ion-card-title>
+      <p>{{ conference.description }}</p>
+      <p>{{ conference.location }}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

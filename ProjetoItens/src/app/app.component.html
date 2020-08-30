@@ -1,0 +1,30 @@
+<div class="po-wrapper">
+
+  <div *ngIf="user == '' ">
+    <po-toolbar
+      [p-profile]="login"
+      [p-profile-actions]="loginActions"
+      [p-title]="title"
+    >
+    </po-toolbar>
+  </div>
+
+  <div *ngIf="user != '' " >
+    <po-toolbar
+    [p-profile]="profile"
+    [p-profile-actions]="profileActions"
+    [p-notification-actions]="notificationActions"
+    [p-notification-number]="getNotificationNumber()"
+    [p-title]="title"
+    >
+    </po-toolbar>
+
+  </div>
+
+  <po-menu  [p-menus]="menus"></po-menu>
+
+  <po-page-default p-title="TABELA DE ITENS">
+    <router-outlet></router-outlet>
+  </po-page-default>
+</div>
+

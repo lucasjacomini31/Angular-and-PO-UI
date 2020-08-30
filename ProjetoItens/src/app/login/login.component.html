@@ -1,0 +1,15 @@
+<div class="container">
+  <h2 class="text-center">LOGIN</h2>
+  <po-divider></po-divider>
+
+  <po-input name="input" [(ngModel)] = "input" p-label="Usuário" p-icon="po-icon po-icon-user"> </po-input>
+  <po-password  name="password" [(ngModel)] = "password" p-label="Senha"> </po-password>
+
+  <po-button p-label="Entrar" (click)="mandar()">  </po-button>
+
+  <div class="alert alert-danger" role="alert" *ngIf="this.variavel == 'teste' ">
+    <p>Usuário ou Senha incorreto</p>
+  </div>
+
+</div>
+

@@ -1,0 +1,38 @@
+
+
+<div class="po-row">
+
+
+  <po-select
+  [(ngModel)]='valor'
+  class="po-md-2"
+  name="select"
+  [p-options]="[
+    { label: 'Código', value: 'itCodigo' },
+    { label: 'Descrição', value: 'descItem' }
+  ]"
+  >
+  </po-select>
+  <po-input p-clean="true" class="po-md-4" p-icon="po-icon po-icon-search" name="input" [(ngModel)]='buscar'> </po-input>
+</div>
+
+<div >
+  <po-table
+    [p-striped]="true"
+    [p-columns]="columns"
+    (p-show-more)="showMore()"
+    [p-items]="_itens">
+    <ng-template p-table-row-template let-rowItem let-i="rowIndex" [p-table-row-template-show]="isUndelivered">
+      <po-widget p-title="Detalhe do Item {{ rowItem.itCodigo }}">
+        <div class="po-row">
+          <po-info class="po-md-4" p-label="Código" p-orientation="horizontal" [p-value]="rowItem.itCodigo"></po-info>
+          <po-info class="po-md-4" p-label="Descrição" p-orientation="horizontal" [p-value]="rowItem.descItem"></po-info>
+        </div>
+      </po-widget>
+    </ng-template>
+  </po-table>
+
+</div>
+
+
+

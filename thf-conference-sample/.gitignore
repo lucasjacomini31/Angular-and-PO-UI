@@ -1,0 +1,9 @@
+# dependencies
+/thf-conference-api/node_modules
+/thf-conference-api/package-lock.json
+
+/thf-sample-app-conference/node_modules
+/thf-sample-app-conference/package-lock.json
+
+/thf-sample-web-conference/node_modules
+/thf-sample-web-conference/package-lock.json

@@ -1,0 +1,21 @@
+<po-page-default p-title="">
+  <div class="po-mt-1 po-lg-7">
+    <po-widget class="po-md-12 po-sm-mb-1 po-mb-1 po-lg-mb-1" p-title="Informações de Usuário">
+      <div class="po-row">
+        <div class="po-md-5 po-lg-4">
+          <po-avatar p-size="xl" p-src="assets/graphics/{{ userData.photo }}"></po-avatar>
+        </div>
+        <div class="po-md-7 po-lg-8">
+          <div class="po-mb-2">
+            <po-info p-label="Name" [p-value]="userData.name"> </po-info>
+            <po-tag p-value="Premium Account" (p-click)="openModal()"> </po-tag>
+          </div>
+          <div class="po-mb-2">
+            <po-info class="po-mt-5" p-label="Email" [p-value]="userData.email"> </po-info>
+          </div>
+        </div>
+      </div>
+    </po-widget>
+  </div>
+</po-page-default>
+

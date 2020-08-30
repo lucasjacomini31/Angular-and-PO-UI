@@ -1,0 +1,17 @@
+<div class='po-container' >
+
+  <po-widget *ngFor='let product of produto'
+    class="po-sm-3"
+    [p-height]="height"
+    p-primary-label="Buy"
+    p-secondary-label="Details"
+    p-title='{{product.name}}'
+    (p-primary-action)="showAngular()"
+  >
+  <div >
+    <img class="centerprod" [src]="product.imageUrl">
+  </div>
+  </po-widget>
+
+
+</div>
